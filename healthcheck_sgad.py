@@ -1,8 +1,12 @@
 #!/usr/local/bin/python3.12
 import oracledb
+import os
+
+# Lendo senha de variavel do ambiente
+userpwd = os.environ.get("PYTHON_DB_PASSWORD")
 
 # Criando pool de conexões caso seja necessario algum paralelismo no futuro
-pool = oracledb.create_pool(user="tosp", password="A*********8", dsn="10.129.48.68/tosprd", min=1, max=5, increment=1)
+pool = oracledb.create_pool(user="tosp", password=userpwd, dsn="10.129.48.68/tosprd", min=1, max=5, increment=1)
 connection = pool.acquire()
 pool.wait_timeout = 1000
 if connection.is_healthy():
