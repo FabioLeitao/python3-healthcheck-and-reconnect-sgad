@@ -16,9 +16,7 @@ if connection.is_healthy():
         with connection.cursor() as cursor:
             for ID, KEY, VALUE, UPDATED in cursor.execute(select_sql):
                     print(ID, KEY, VALUE, UPDATED)
-                    if VALUE == "false":
-                        Corrige_SGAD()
-                    if VALUE == "falso":
+                    if VALUE in [ "false", "falso"]:
                         Corrige_SGAD()
         connection.close()
     pool.close()
