@@ -2,7 +2,7 @@
 import oracledb
 
 # Criando pool de conexões caso seja necessario algum paralelismo no futuro
-pool = oracledb.create_pool(user="tosp", password="Athenas2018", dsn="10.129.48.68/tosprd", min=1, max=5, increment=1)
+pool = oracledb.create_pool(user="tosp", password="A*********8", dsn="10.129.48.68/tosprd", min=1, max=5, increment=1)
 connection = pool.acquire()
 pool.wait_timeout = 1000
 if connection.is_healthy():
