@@ -17,6 +17,7 @@ __pycache__/
 *.tgz
 *.tbz
 *.xz
+*.zstd
 
 # Distribution / packaging
 .Python
