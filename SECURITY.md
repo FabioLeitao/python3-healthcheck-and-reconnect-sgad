@@ -10,7 +10,7 @@ python3 -m pip install oracledb --upgrade --user
 
 To avoid the need to expose passwords, the script has been adapted to find the password from an OS env. Use it like the following:
 
-export PYTHON_DB_PASSWORD="Senha de acesso" ; healthcheck_sgad.py
+export PYTHON_DB_PASSWORD="Senha de acesso" ; pyhton3-healthcheck_sgad.py
 
 ## Reporting a Vulnerability
 
